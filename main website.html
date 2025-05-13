@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Innovation Against Diesel Mining</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#FF0000", secondary: "#FFD700" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #000;
+      color: #fff;
+      }
+      .logo-pattern {
+      position: relative;
+      }
+      .logo-item {
+      width: 60px;
+      height: 60px;
+      background-color: #FF0000;
+      border-radius: 50%;
+      position: relative;
+      }
+      .logo-item::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70%;
+      height: 70%;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFD700'%3E%3Cpath d='M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      }
+      .project-card {
+      transition: transform 0.3s ease;
+      }
+      .project-card:hover {
+      transform: translateY(-5px);
+      }
+      .cta-button {
+      position: relative;
+      overflow: hidden;
+      }
+      .cta-button::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: 0.5s;
+      }
+      .cta-button:hover::after {
+      left: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header class="relative">
+      <nav class="flex justify-between items-center py-6 px-8 lg:px-16">
+        <div class="flex items-center">
+          <div
+            class="w-12 h-12 flex items-center justify-center bg-red-600 rounded-full relative mr-4"
+          >
+            <div
+              class="w-8 h-8"
+              style="background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%23FFD700\'%3E%3Cpath d=\'M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\'/%3E%3C/svg%3E'); background-repeat: no-repeat; background-position: center;"
+            ></div>
+          </div>
+          <h1 class="text-2xl font-bold">Pureelium </h1>
+        </div>
+        <div class="hidden lg:flex space-x-8">
+          <a
+            href="#about"
+            class="text-white hover:text-primary transition-colors"
+            >About</a
+          >
+          <a
+            href="#projects"
+            class="text-white hover:text-primary transition-colors"
+            >Projects</a
+          >
+          <a
+            href="#impact"
+            class="text-white hover:text-primary transition-colors"
+            >Impact</a
+          >
+          <a
+            href="#join"
+            class="text-white hover:text-primary transition-colors"
+            >Join Us</a
+          >
+        </div>
+        <button class="lg:hidden w-10 h-10 flex items-center justify-center">
+          <i class="ri-menu-line ri-xl"></i>
+        </button>
+      </nav>
+    </header>
+    <!-- Hero Section -->
+    <section class="relative min-h-[600px] flex items-center">
+      <div class="absolute top-0 right-0 p-8 logo-pattern">
+        <div class="relative">
+          <div class="logo-item absolute top-0 right-0"></div>
+          <div class="logo-item absolute top-20 right-20"></div>
+          <div class="logo-item absolute top-40 right-10"></div>
+          <div class="logo-item absolute top-60 right-30"></div>
+        </div>
+      </div>
+      <div class="container mx-auto px-8 lg:px-16 py-20">
+        <div class="max-w-3xl">
+          <h1 class="text-5xl lg:text-6xl font-bold mb-6">
+            Innovation & Creativity Against Diesel Mining
+          </h1>
+          <p class="text-xl mb-8 text-gray-300">
+            A comprehensive marketing campaign showcasing creative solutions to
+            combat the environmental impact of diesel fuel in the mining
+            industry.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button
+              class="cta-button bg-primary text-white px-8 py-3 font-semibold !rounded-button whitespace-nowrap"
+            >
+              Join The Movement
+            </button>
+            <button
+              class="border-2 border-white text-white px-8 py-3 font-semibold !rounded-button hover:bg-white hover:text-black transition-colors whitespace-nowrap"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-black">
+      <div class="container mx-auto px-8 lg:px-16">
+        <div class="flex flex-col lg:flex-row gap-16">
+          <div class="lg:w-1/2">
+            <h2 class="text-3xl font-bold mb-6">Our Mission</h2>
+            <p class="text-gray-300 mb-6">
+              We are dedicated to fighting against the harmful use of diesel
+              fuels in the mining industry through innovative marketing and
+              creative solutions. Our campaign aims to raise awareness about the
+              environmental impact of diesel mining and promote sustainable
+              alternatives.
+            </p>
+            <p class="text-gray-300 mb-6">
+              Through our five key projects - logo design, poster campaign,
+              informative podcast, branded household items, and statement
+              clothing - we're building a movement that demands change in the
+              mining sector.
+            </p>
+            <div class="flex items-center gap-4 mt-8">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-gray-800 rounded-full"
+              >
+                <i class="ri-earth-line ri-xl"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold">Environmental Impact</h3>
+                <p class="text-gray-400">Reducing carbon emissions by 30%</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 mt-4">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-gray-800 rounded-full"
+              >
+                <i class="ri-community-line ri-xl"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold">Community Support</h3>
+                <p class="text-gray-400">Over 50,000 supporters worldwide</p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/2 flex justify-center items-center">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="logo-item"></div>
+              <div class="logo-item"></div>
+              <div class="logo-item"></div>
+              <div class="logo-item"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-950">
+      <div class="container mx-auto px-8 lg:px-16">
+        <h2 class="text-4xl font-bold mb-4 text-center">Our Projects</h2>
+        <p class="text-xl text-gray-300 text-center mb-16 max-w-3xl mx-auto">
+          Five innovative approaches to spread awareness and drive change in the
+          mining industry.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1: Logo -->
+          <div
+            class="project-card bg-black p-8 rounded shadow-lg border border-gray-800"
+          >
+            <div
+              class="w-16 h-16 flex items-center justify-center bg-red-600 rounded-full mb-6"
+            >
+              <i class="ri-image-line ri-xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Logo Design</h3>
+            <p class="text-gray-300 mb-6">
+              Our distinctive logo features a red circle with a yellow star,
+              symbolizing urgency and hope. The red background represents the
+              critical nature of our mission, while the star signifies guidance
+              toward a better future.
+            </p>
+            <div class="flex justify-between items-center">
+              <span class="text-primary font-semibold">Brand Identity</span>
+              <button
+                id="project-1-btn"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700 transition-colors project-detail-btn"
+                data-project="1"
+              >
+                <i class="ri-arrow-right-line"></i>
+              </button>
+            </div>
+          </div>
+          <!-- Project 2: Posters -->
+          <div
+            class="project-card bg-black p-8 rounded shadow-lg border border-gray-800"
+          >
+            <div
+              class="w-16 h-16 flex items-center justify-center bg-red-600 rounded-full mb-6"
+            >
+              <i class="ri-file-list-3-line ri-xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Poster Campaign</h3>
+            <p class="text-gray-300 mb-6">
+              A series of high-impact posters featuring stark imagery of mining
+              environmental damage contrasted with sustainable alternatives.
+              Bold typography and our signature red and yellow color scheme
+              create immediate visual impact.
+            </p>
+            <div class="flex justify-between items-center">
+              <span class="text-primary font-semibold"
+                >Visual Communication</span
+              >
+              <button
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700 transition-colors project-detail-btn"
+                data-project="2"
+              >
+                <i class="ri-arrow-right-line"></i>
+              </button>
+            </div>
+          </div>
+          <!-- Project 3: Podcast -->
+          <div
+            class="project-card bg-black p-8 rounded shadow-lg border border-gray-800"
+          >
+            <div
+              class="w-16 h-16 flex items-center justify-center bg-red-600 rounded-full mb-6"
+            >
+              <i class="ri-mic-line ri-xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">3-Minute Podcast</h3>
+            <p class="text-gray-300 mb-6">
+              Our concise, informative podcast series delivers powerful messages
+              about diesel mining impacts and alternatives. Each episode
+              features industry experts and affected community members sharing
+              their perspectives.
+            </p>
+            <div class="flex justify-between items-center">
+              <span class="text-primary font-semibold">Audio Content</span>
+              <a
+                href="podcast.html"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700 transition-colors"
+              >
+                <i class="ri-arrow-right-line"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Project 4: Household Items -->
+          <div
+            class="project-card bg-black p-8 rounded shadow-lg border border-gray-800"
+          >
+            <div
+              class="w-16 h-16 flex items-center justify-center bg-red-600 rounded-full mb-6"
+            >
+              <i class="ri-home-line ri-xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Household Items</h3>
+            <p class="text-gray-300 mb-6">
+              Everyday products reimagined with our campaign branding. From
+              coffee mugs to reusable shopping bags, these items spread
+              awareness through daily use while demonstrating sustainable
+              material alternatives.
+            </p>
+            <div class="flex justify-between items-center">
+              <span class="text-primary font-semibold">Product Design</span>
+              <button
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700 transition-colors project-detail-btn"
+                data-project="2"
+              >
+                <i class="ri-arrow-right-line"></i>
+              </button>
+            </div>
+          </div>
+          <!-- Project 5: Clothing -->
+          <div
+            class="project-card bg-black p-8 rounded shadow-lg border border-gray-800"
+          >
+            <div
+              class="w-16 h-16 flex items-center justify-center bg-red-600 rounded-full mb-6"
+            >
+              <i class="ri-t-shirt-line ri-xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Clothing Line</h3>
+            <p class="text-gray-300 mb-6">
+              A collection of statement apparel featuring our logo and powerful
+              messaging. Each piece is made from sustainable materials, creating
+              a walking billboard for our cause while demonstrating ethical
+              production.
+            </p>
+            <div class="flex justify-between items-center">
+              <span class="text-primary font-semibold">Wearable Activism</span>
+              <a
+                href="clothing.html"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700 transition-colors"
+              >
+                <i class="ri-arrow-right-line"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Project Overview -->
+          <div class="project-card bg-red-600 p-8 rounded shadow-lg">
+            <div
+              class="w-16 h-16 flex items-center justify-center bg-white rounded-full mb-6"
+            >
+              <i class="ri-lightbulb-line ri-xl text-red-600"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Campaign Impact</h3>
+            <p class="text-white mb-6">
+              Our integrated approach ensures maximum visibility and engagement
+              across different audiences. By combining visual, audio, and
+              physical elements, we create a comprehensive movement against
+              diesel mining.
+            </p>
+            <div class="flex justify-between items-center">
+              <span class="text-white font-semibold">View Full Strategy</span>
+              <button
+                class="w-10 h-10 flex items-center justify-center bg-white rounded-full"
+              >
+                <i class="ri-arrow-right-line text-red-600"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Featured Project: Podcast -->
+    <section class="py-20 bg-black">
+      <div class="container mx-auto px-8 lg:px-16">
+        <div class="flex flex-col lg:flex-row gap-16 items-center">
+          <div class="lg:w-1/2">
+            <h2 class="text-3xl font-bold mb-6">Featured: 3-Minute Podcast</h2>
+            <p class="text-gray-300 mb-8">
+              Our podcast series "Mining the Truth" delivers powerful insights
+              in just 3 minutes per episode. Listen to industry experts,
+              environmental scientists, and community activists share their
+              perspectives on diesel mining impacts.
+            </p>
+            <div class="bg-gray-900 p-6 rounded-lg mb-8">
+              <div class="flex items-center justify-between mb-4">
+                <div>
+                  <h3 class="font-bold">
+                    Episode 5: Alternative Energy in Mining
+                  </h3>
+                  <p class="text-gray-400 text-sm">April 25, 2025 • 3:05</p>
+                </div>
+                <button
+                  class="w-12 h-12 flex items-center justify-center bg-red-600 rounded-full"
+                >
+                  <i class="ri-play-fill ri-xl"></i>
+                </button>
+              </div>
+              <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden">
+                <div class="bg-red-600 h-full w-3/4 rounded-full"></div>
+              </div>
+              <div class="flex justify-between mt-2 text-xs text-gray-400">
+                <span>0:00</span>
+                <span>3:05</span>
+              </div>
+            </div>
+            <div class="space-y-4">
+              <div class="flex items-center p-4 bg-gray-900 rounded-lg">
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full mr-4"
+                >
+                  <i class="ri-play-fill"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold">
+                    Episode 4: Community Impact Stories
+                  </h4>
+                  <p class="text-sm text-gray-400">April 18, 2025 • 3:12</p>
+                </div>
+              </div>
+              <div class="flex items-center p-4 bg-gray-900 rounded-lg">
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full mr-4"
+                >
+                  <i class="ri-play-fill"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold">
+                    Episode 3: The Economics of Change
+                  </h4>
+                  <p class="text-sm text-gray-400">April 11, 2025 • 2:58</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/2 flex justify-center">
+            <div class="relative">
+              <div
+                class="w-64 h-64 bg-red-600 rounded-full flex items-center justify-center"
+              >
+                <div
+                  class="w-48 h-48 bg-black rounded-full flex items-center justify-center"
+                >
+                  <div
+                    class="w-32 h-32 bg-red-600 rounded-full flex items-center justify-center"
+                  >
+                    <i class="ri-mic-fill ri-4x text-white"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="absolute -top-4 -right-4 w-16 h-16 logo-item"></div>
+              <div class="absolute -bottom-4 -left-4 w-16 h-16 logo-item"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Impact Statistics -->
+    <section id="impact" class="py-20 bg-gray-950">
+      <div class="container mx-auto px-8 lg:px-16">
+        <h2 class="text-4xl font-bold mb-4 text-center">Campaign Impact</h2>
+        <p class="text-xl text-gray-300 text-center mb-16 max-w-3xl mx-auto">
+          Our innovative approach is creating real change in the mining
+          industry.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="bg-black p-8 rounded-lg text-center">
+            <div class="text-4xl font-bold text-primary mb-2">50,000+</div>
+            <p class="text-gray-300">Campaign Supporters</p>
+          </div>
+          <div class="bg-black p-8 rounded-lg text-center">
+            <div class="text-4xl font-bold text-primary mb-2">12</div>
+            <p class="text-gray-300">Mining Companies Engaged</p>
+          </div>
+          <div class="bg-black p-8 rounded-lg text-center">
+            <div class="text-4xl font-bold text-primary mb-2">30%</div>
+            <p class="text-gray-300">Potential Emissions Reduction</p>
+          </div>
+          <div class="bg-black p-8 rounded-lg text-center">
+            <div class="text-4xl font-bold text-primary mb-2">5,000+</div>
+            <p class="text-gray-300">Branded Items Distributed</p>
+          </div>
+        </div>
+        <div class="mt-16 bg-black p-8 rounded-lg">
+          <h3 class="text-2xl font-bold mb-6 text-center">Regional Impact</h3>
+          <div class="h-80" id="impact-chart"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Call to Action -->
+    <section id="join" class="py-20 bg-black">
+      <div class="container mx-auto px-8 lg:px-16">
+        <div
+          class="bg-gray-900 rounded-xl p-8 lg:p-16 relative overflow-hidden"
+        >
+          <div class="absolute top-0 right-0 p-8">
+            <div class="logo-item"></div>
+          </div>
+          <div class="max-w-2xl relative z-10">
+            <h2 class="text-4xl font-bold mb-6">Join Our Movement</h2>
+            <p class="text-xl text-gray-300 mb-8">
+              Be part of the change. Join our campaign against diesel mining and
+              help create a sustainable future for the mining industry.
+            </p>
+            <form class="space-y-6">
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-gray-300 mb-2"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full bg-black border-none p-4 rounded text-white focus:ring-2 focus:ring-primary"
+                  placeholder="your@email.com"
+                />
+              </div>
+              <div>
+                <label
+                  for="involvement"
+                  class="block text-sm font-medium text-gray-300 mb-2"
+                  >How would you like to get involved?</label
+                >
+                <div class="relative">
+                  <select
+                    id="involvement"
+                    class="w-full bg-black border-none p-4 rounded text-white appearance-none pr-8 focus:ring-2 focus:ring-primary"
+                  >
+                    <option>Spread awareness</option>
+                    <option>Volunteer</option>
+                    <option>Donate</option>
+                    <option>Corporate partnership</option>
+                  </select>
+                  <div
+                    class="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none"
+                  >
+                    <i class="ri-arrow-down-s-line"></i>
+                  </div>
+                </div>
+              </div>
+              <button
+                type="submit"
+                class="bg-primary text-white px-8 py-4 font-semibold !rounded-button whitespace-nowrap"
+              >
+                Join Now
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-950">
+      <div class="container mx-auto px-8 lg:px-16">
+        <div class="flex flex-col lg:flex-row justify-between gap-8">
+          <div class="lg:w-1/3">
+            <div class="flex items-center mb-6">
+              <div
+                class="w-10 h-10 flex items-center justify-center bg-red-600 rounded-full mr-3"
+              >
+                <div
+                  class="w-6 h-6"
+                  style="background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%23FFD700\'%3E%3Cpath d=\'M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\'/%3E%3C/svg%3E'); background-repeat: no-repeat; background-position: center;"
+                ></div>
+              </div>
+              <h3 class="text-xl font-bold">Pureelium </h3>
+            </div>
+            <p class="text-gray-400 mb-6">
+              A creative campaign fighting against the environmental impact of
+              diesel fuels in the mining industry through innovative marketing
+              and awareness.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors"
+              >
+                <i class="ri-twitter-x-line"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors"
+              >
+                <i class="ri-instagram-line"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors"
+              >
+                <i class="ri-linkedin-line"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors"
+              >
+                <i class="ri-youtube-line"></i>
+              </a>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 lg:grid-cols-3 gap-8 lg:w-2/3">
+            <div>
+              <h4 class="font-semibold mb-4">Projects</h4>
+              <ul class="space-y-2 text-gray-400">
+                <li>
+                  <a href="#" class="hover:text-primary transition-colors"
+                    >Logo Design</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-primary transition-colors"
+                    >Poster Campaign</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-primary transition-colors"
+                    >Podcast Series</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-primary transition-colors"
+                    >Household Items</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-primary transition-colors"
+                    >Clothing Line</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-4">Resources</h4>
+              <ul class="space-y-2 text-gray-400">
+                <li>
+                  <a href="#" class="hover:text-primary transition-colors"
+                    >Research</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-primary transition-colors"
+                    >Statistics</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-primary transition-colors"
+                    >Case Studies</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-primary transition-colors"
+                    >Media Kit</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-primary transition-colors"
+                    >Press Releases</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-4">Contact</h4>
+              <ul class="space-y-2 text-gray-400">
+                <li class="flex items-center">
+                  <i class="ri-mail-line mr-2"></i>
+                  <a
+                    href="mailto:info@Pureelium.org"
+                    class="hover:text-primary transition-colors"
+                    >info@Pureelium.org</a
+                  >
+                </li>
+                <li class="flex items-center">
+                  <i class="ri-phone-line mr-2"></i>
+                  <a
+                    href="tel:+15551234567"
+                    class="hover:text-primary transition-colors"
+                    >+1 (555) 123-4567</a
+                  >
+                </li>
+                <li class="flex items-center">
+                  <i class="ri-map-pin-line mr-2"></i>
+                  <span>123 Advocacy St, Green City</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500"
+        >
+          <p>© 2025 Pureelium Campaign. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <div
+      id="project-modal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50"
+    >
+      <div
+        class="bg-gray-900 rounded-lg max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto relative"
+      >
+        <button
+          id="close-modal"
+          class="absolute top-4 right-4 w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-gray-700 rounded-full transition-colors"
+        >
+          <i class="ri-close-line"></i>
+        </button>
+        <div id="modal-content" class="p-8"></div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const projectData = {
+          1: {
+            title: "Logo Design",
+            subtitle: "Brand Identity",
+            description: `Our distinctive logo design project represents the core values of our campaign against diesel mining. The carefully crafted visual elements combine to create a powerful symbol of change.`,
+            details: [
+              "Red circle symbolizing urgency and immediate action needed",
+              "Yellow star representing hope and guidance toward sustainable solutions",
+              "Simple, memorable design for maximum impact across all media",
+              "Versatile application from digital to physical materials",
+            ],
+            progress: {
+              design: 100,
+              implementation: 85,
+              recognition: 75,
+            },
+            involvement: [
+              "Share our logo on social media",
+              "Apply for brand ambassador program",
+              "Request logo usage guidelines",
+              "Participate in logo evolution workshops",
+            ],
+            impact:
+              "Currently displayed on over 5,000 items and recognized by 72% of surveyed mining industry professionals",
+          },
+          2: {
+            title: "Poster Campaign",
+            subtitle: "Visual Communication",
+            description:
+              "Our impactful poster series combines stark imagery with compelling messages to highlight the environmental consequences of diesel mining and showcase sustainable alternatives.",
+            details: [
+              "High-contrast visuals depicting environmental impact",
+              "Integration of campaign color scheme",
+              "Strategic placement in mining communities",
+              "Digital and print distribution channels",
+            ],
+            progress: {
+              design: 95,
+              distribution: 80,
+              engagement: 70,
+            },
+            involvement: [
+              "Download digital posters",
+              "Request physical copies",
+              "Organize local displays",
+              "Submit poster locations",
+            ],
+            impact:
+              "Reached over 1 million viewers across 6 continents with 85% recall rate",
+          },
+          3: {
+            title: "3-Minute Podcast",
+            subtitle: "Audio Content",
+            description:
+              "Our podcast series delivers concise yet powerful messages about the impacts of diesel mining, featuring industry experts and affected community voices.",
+            details: [
+              "Expert interviews and testimonials",
+              "Data-driven storytelling",
+              "Multi-language accessibility",
+              "Weekly release schedule",
+            ],
+            progress: {
+              production: 90,
+              distribution: 75,
+              listenership: 65,
+            },
+            involvement: [
+              "Subscribe to podcast",
+              "Share episodes",
+              "Submit story ideas",
+              "Become a guest speaker",
+            ],
+            impact: "Over 50,000 monthly listeners with 92% positive feedback rate",
+          },
+          4: {
+            title: "Household Items",
+            subtitle: "Product Design",
+            description:
+              "Our branded household items spread awareness through daily use while demonstrating sustainable material alternatives to traditional products.",
+            details: [
+              "Eco-friendly materials",
+              "Practical everyday items",
+              "Educational packaging",
+              "Local production partners",
+            ],
+            progress: {
+              design: 100,
+              production: 85,
+              distribution: 70,
+            },
+            involvement: [
+              "Purchase items",
+              "Become a retailer",
+              "Submit product ideas",
+              "Join focus groups",
+            ],
+            impact: "5,000+ items distributed with 95% user satisfaction rate",
+          },
+          5: {
+            title: "Clothing Line",
+            subtitle: "Wearable Activism",
+            description:
+              "Our sustainable clothing collection serves as walking billboards for the cause while demonstrating ethical production practices.",
+            details: [
+              "Organic materials",
+              "Fair trade production",
+              "Bold campaign messaging",
+              "Size-inclusive designs",
+            ],
+            progress: {
+              design: 90,
+              production: 80,
+              sales: 65,
+            },
+            involvement: [
+              "Shop collection",
+              "Become brand ambassador",
+              "Submit design ideas",
+              "Join sustainability program",
+            ],
+            impact:
+              "1,000+ pieces sold with 40% of proceeds supporting clean energy initiatives",
+          },
+        };
+        const modal = document.getElementById("project-modal");
+        const closeBtn = document.getElementById("close-modal");
+        const modalContent = document.getElementById("modal-content");
+        document.querySelectorAll(".project-detail-btn").forEach((button) => {
+          button.addEventListener("click", function () {
+            const projectId = this.getAttribute("data-project");
+            const project = projectData[projectId];
+            if (project) {
+              modalContent.innerHTML = `
+      <h2 class="text-3xl font-bold mb-4">${project.title}</h2>
+      <p class="text-primary font-semibold mb-8">${project.subtitle}</p>
+      <p class="text-gray-300 mb-8">${project.description}</p>
+      <h3 class="text-xl font-bold mb-4">Key Elements</h3>
+      <ul class="list-none space-y-3 mb-8">
+      ${project.details
+        .map(
+          (detail) => `
+      <li class="flex items-center text-gray-300">
+      <i class="ri-checkbox-circle-line text-primary mr-3"></i>
+      ${detail}
+      </li>
+      `,
+        )
+        .join("")}
+      </ul>
+      <h3 class="text-xl font-bold mb-4">Project Progress</h3>
+      <div class="space-y-4 mb-8">
+      ${Object.entries(project.progress)
+        .map(
+          ([key, value]) => `
+      <div>
+      <div class="flex justify-between text-sm mb-1">
+      <span class="text-gray-300 capitalize">${key}</span>
+      <span class="text-primary">${value}%</span>
+      </div>
+      <div class="w-full bg-gray-800 rounded-full h-2">
+      <div class="bg-primary rounded-full h-2" style="width: ${value}%"></div>
+      </div>
+      </div>
+      `,
+        )
+        .join("")}
+      </div>
+      <h3 class="text-xl font-bold mb-4">Get Involved</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+      ${project.involvement
+        .map(
+          (item) => `
+      <button class="bg-gray-800 hover:bg-gray-700 text-white p-4 rounded !rounded-button flex items-center justify-between whitespace-nowrap">
+      <span>${item}</span>
+      <i class="ri-arrow-right-line ml-2"></i>
+      </button>
+      `,
+        )
+        .join("")}
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg">
+      <h3 class="text-xl font-bold mb-2">Impact</h3>
+      <p class="text-gray-300">${project.impact}</p>
+      </div>
+      `;
+              modal.classList.remove("hidden");
+              modal.classList.add("flex");
+              document.body.style.overflow = "hidden";
+            }
+          });
+        });
+        closeBtn.addEventListener("click", function () {
+          modal.classList.add("hidden");
+          modal.classList.remove("flex");
+          document.body.style.overflow = "";
+        });
+        modal.addEventListener("click", function (e) {
+          if (e.target === modal) {
+            modal.classList.add("hidden");
+            modal.classList.remove("flex");
+            document.body.style.overflow = "";
+          }
+        });
+        const chartDom = document.getElementById("impact-chart");
+        const myChart = echarts.init(chartDom);
+        const option = {
+          animation: false,
+          tooltip: {
+            trigger: "axis",
+            backgroundColor: "rgba(255, 255, 255, 0.8)",
+            textStyle: {
+              color: "#1f2937",
+            },
+          },
+          legend: {
+            data: ["Awareness", "Engagement", "Policy Change"],
+            textStyle: {
+              color: "#fff",
+            },
+          },
+          grid: {
+            left: "3%",
+            right: "4%",
+            bottom: "3%",
+            containLabel: true,
+          },
+          xAxis: {
+            type: "category",
+            boundaryGap: false,
+            data: [
+              "North America",
+              "South America",
+              "Europe",
+              "Africa",
+              "Asia",
+              "Australia",
+            ],
+            axisLabel: {
+              color: "#fff",
+            },
+            axisLine: {
+              lineStyle: {
+                color: "#444",
+              },
+            },
+          },
+          yAxis: {
+            type: "value",
+            axisLabel: {
+              color: "#fff",
+            },
+            axisLine: {
+              lineStyle: {
+                color: "#444",
+              },
+            },
+            splitLine: {
+              lineStyle: {
+                color: "#333",
+              },
+            },
+          },
+          series: [
+            {
+              name: "Awareness",
+              type: "line",
+              smooth: true,
+              lineStyle: {
+                width: 3,
+                color: "rgba(87, 181, 231, 1)",
+              },
+              areaStyle: {
+                color: {
+                  type: "linear",
+                  x: 0,
+                  y: 0,
+                  x2: 0,
+                  y2: 1,
+                  colorStops: [
+                    {
+                      offset: 0,
+                      color: "rgba(87, 181, 231, 0.2)",
+                    },
+                    {
+                      offset: 1,
+                      color: "rgba(87, 181, 231, 0.01)",
+                    },
+                  ],
+                },
+              },
+              data: [85, 65, 78, 45, 60, 72],
+            },
+            {
+              name: "Engagement",
+              type: "line",
+              smooth: true,
+              lineStyle: {
+                width: 3,
+                color: "rgba(141, 211, 199, 1)",
+              },
+              areaStyle: {
+                color: {
+                  type: "linear",
+                  x: 0,
+                  y: 0,
+                  x2: 0,
+                  y2: 1,
+                  colorStops: [
+                    {
+                      offset: 0,
+                      color: "rgba(141, 211, 199, 0.2)",
+                    },
+                    {
+                      offset: 1,
+                      color: "rgba(141, 211, 199, 0.01)",
+                    },
+                  ],
+                },
+              },
+              data: [65, 55, 60, 35, 40, 50],
+            },
+            {
+              name: "Policy Change",
+              type: "line",
+              smooth: true,
+              lineStyle: {
+                width: 3,
+                color: "rgba(251, 191, 114, 1)",
+              },
+              areaStyle: {
+                color: {
+                  type: "linear",
+                  x: 0,
+                  y: 0,
+                  x2: 0,
+                  y2: 1,
+                  colorStops: [
+                    {
+                      offset: 0,
+                      color: "rgba(251, 191, 114, 0.2)",
+                    },
+                    {
+                      offset: 1,
+                      color: "rgba(251, 191, 114, 0.01)",
+                    },
+                  ],
+                },
+              },
+              data: [30, 25, 45, 15, 20, 35],
+            },
+          ],
+        };
+        myChart.setOption(option);
+        window.addEventListener("resize", function () {
+          myChart.resize();
+        });
+      });
+    </script>
+  </body>
+</html>

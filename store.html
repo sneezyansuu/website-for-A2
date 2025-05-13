@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>purelium - Store</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#FF0000", secondary: "#FFD700" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #000;
+      color: #fff;
+      }
+      .product-card {
+      transition: transform 0.3s ease;
+      }
+      .product-card:hover {
+      transform: translateY(-5px);
+      }
+      .size-radio:checked + label {
+      background-color: #FF0000;
+      color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-primary text-white text-center py-3 px-4">
+      <p class="text-sm font-medium">
+        All profits made from these products will go into helping the fight
+        against the use of diesel fuels
+      </p>
+    </div>
+    <header class="relative">
+      <nav class="flex justify-between items-center py-6 px-8 lg:px-16">
+        <div class="flex items-center">
+          <div
+            class="w-12 h-12 flex items-center justify-center bg-red-600 rounded-full relative mr-4"
+          >
+            <div
+              class="w-8 h-8"
+              style="background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%23FFD700\'%3E%3Cpath d=\'M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\'/%3E%3C/svg%3E'); background-repeat: no-repeat; background-position: center;"
+            ></div>
+          </div>
+          <h1 class="text-2xl font-bold">Pureelium Store</h1>
+        </div>
+        <div class="flex items-center space-x-4">
+          <button
+            class="flex items-center space-x-2 bg-gray-800 px-4 py-2 rounded !rounded-button"
+          >
+            <i class="ri-shopping-cart-line"></i>
+            <span>Cart (0)</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main class="container mx-auto px-8 lg:px-16 py-12">
+      <h2 class="text-3xl font-bold mb-8">Our Products</h2>
+      <div class="mb-16">
+        <h3 class="text-2xl font-bold mb-6">Apparel</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- T-Shirt Product Card -->
+          <div class="product-card bg-gray-900 rounded-lg overflow-hidden">
+            <div class="aspect-w-1 aspect-h-1 bg-gray-800">
+              <img
+                src="https://static.readdy.ai/image/bf761e300f174f1d13cf0f4a035dcb62/7ef1c532ceff60a4afbf529c6e2fb078.png"
+                alt="Campaign T-Shirt"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Campaign T-Shirt</h3>
+              <p class="text-gray-400 mb-4">
+                Show your support with our signature logo t-shirt made from 100%
+                organic cotton.
+              </p>
+              <div class="mb-4">
+                <p class="text-lg font-bold">$29.99</p>
+              </div>
+              <div class="mb-4">
+                <p class="mb-2 font-medium">Country:</p>
+                <div class="relative">
+                  <button
+                    id="country-selector"
+                    class="w-full px-4 py-2 text-left border border-gray-600 rounded !rounded-button flex justify-between items-center"
+                  >
+                    <span id="selected-country">Select Country</span>
+                    <i class="ri-arrow-down-s-line"></i>
+                  </button>
+                  <div
+                    id="country-dropdown"
+                    class="hidden absolute z-10 w-full mt-1 bg-gray-900 border border-gray-600 rounded !rounded-button"
+                  >
+                    <div class="py-1">
+                      <button
+                        class="w-full px-4 py-2 text-left hover:bg-gray-800"
+                        data-country="default"
+                        data-image="https://static.readdy.ai/image/bf761e300f174f1d13cf0f4a035dcb62/7ef1c532ceff60a4afbf529c6e2fb078.png"
+                      >
+                        Default
+                      </button>
+                      <button
+                        class="w-full px-4 py-2 text-left hover:bg-gray-800"
+                        data-country="gabon"
+                        data-image="https://static.readdy.ai/image/bf761e300f174f1d13cf0f4a035dcb62/227f2cf7d04153548557e059ba5ac16d.png"
+                      >
+                        Gabon
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-6">
+                <p class="mb-2 font-medium">Size:</p>
+                <div class="flex space-x-2">
+                  <input
+                    type="radio"
+                    name="tshirt-size"
+                    id="ts-s"
+                    class="size-radio hidden"
+                  />
+                  <label
+                    for="ts-s"
+                    class="px-4 py-2 border border-gray-600 rounded cursor-pointer hover:bg-gray-800"
+                    >S</label
+                  >
+                  <input
+                    type="radio"
+                    name="tshirt-size"
+                    id="ts-m"
+                    class="size-radio hidden"
+                  />
+                  <label
+                    for="ts-m"
+                    class="px-4 py-2 border border-gray-600 rounded cursor-pointer hover:bg-gray-800"
+                    >M</label
+                  >
+                  <input
+                    type="radio"
+                    name="tshirt-size"
+                    id="ts-l"
+                    class="size-radio hidden"
+                  />
+                  <label
+                    for="ts-l"
+                    class="px-4 py-2 border border-gray-600 rounded cursor-pointer hover:bg-gray-800"
+                    >L</label
+                  >
+                  <input
+                    type="radio"
+                    name="tshirt-size"
+                    id="ts-xl"
+                    class="size-radio hidden"
+                  />
+                  <label
+                    for="ts-xl"
+                    class="px-4 py-2 border border-gray-600 rounded cursor-pointer hover:bg-gray-800"
+                    >XL</label
+                  >
+                </div>
+              </div>
+              <button
+                class="w-full bg-primary text-white py-3 font-semibold !rounded-button hover:bg-red-700 transition-colors"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+          <!-- Sweatpants Product Card -->
+          <div class="product-card bg-gray-900 rounded-lg overflow-hidden">
+            <div class="aspect-w-1 aspect-h-1 bg-gray-800">
+              <img
+                src="https://static.readdy.ai/image/bf761e300f174f1d13cf0f4a035dcb62/6282b3a4f43a89be5705afe2fa895e5c.png"
+                alt="Campaign Sweatpants"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Campaign Sweatpants</h3>
+              <p class="text-gray-400 mb-4">
+                Comfortable sweatpants featuring our campaign message, perfect
+                for everyday activism.
+              </p>
+              <div class="mb-4">
+                <p class="text-lg font-bold">$49.99</p>
+              </div>
+              <div class="mb-4">
+                <p class="mb-2 font-medium">Country:</p>
+                <div class="relative">
+                  <button
+                    id="pants-country-selector"
+                    class="w-full px-4 py-2 text-left border border-gray-600 rounded !rounded-button flex justify-between items-center"
+                  >
+                    <span id="pants-selected-country">Select Country</span>
+                    <i class="ri-arrow-down-s-line"></i>
+                  </button>
+                  <div
+                    id="pants-country-dropdown"
+                    class="hidden absolute z-10 w-full mt-1 bg-gray-900 border border-gray-600 rounded !rounded-button"
+                  >
+                    <div class="py-1">
+                      <button
+                        class="w-full px-4 py-2 text-left hover:bg-gray-800"
+                        data-country="default"
+                        data-image="https://static.readdy.ai/image/bf761e300f174f1d13cf0f4a035dcb62/6282b3a4f43a89be5705afe2fa895e5c.png"
+                      >
+                        Default
+                      </button>
+                      <button
+                        class="w-full px-4 py-2 text-left hover:bg-gray-800"
+                        data-country="gabon"
+                        data-image="https://static.readdy.ai/image/bf761e300f174f1d13cf0f4a035dcb62/f5834eaa29af2a3edb9f4eda4ac96d64.png"
+                      >
+                        Gabon
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-6">
+                <p class="mb-2 font-medium">Size:</p>
+                <div class="flex space-x-2">
+                  <input
+                    type="radio"
+                    name="pants-size"
+                    id="sp-s"
+                    class="size-radio hidden"
+                  />
+                  <label
+                    for="sp-s"
+                    class="px-4 py-2 border border-gray-600 rounded cursor-pointer hover:bg-gray-800"
+                    >S</label
+                  >
+                  <input
+                    type="radio"
+                    name="pants-size"
+                    id="sp-m"
+                    class="size-radio hidden"
+                  />
+                  <label
+                    for="sp-m"
+                    class="px-4 py-2 border border-gray-600 rounded cursor-pointer hover:bg-gray-800"
+                    >M</label
+                  >
+                  <input
+                    type="radio"
+                    name="pants-size"
+                    id="sp-l"
+                    class="size-radio hidden"
+                  />
+                  <label
+                    for="sp-l"
+                    class="px-4 py-2 border border-gray-600 rounded cursor-pointer hover:bg-gray-800"
+                    >L</label
+                  >
+                  <input
+                    type="radio"
+                    name="pants-size"
+                    id="sp-xl"
+                    class="size-radio hidden"
+                  />
+                  <label
+                    for="sp-xl"
+                    class="px-4 py-2 border border-gray-600 rounded cursor-pointer hover:bg-gray-800"
+                    >XL</label
+                  >
+                </div>
+              </div>
+              <button
+                class="w-full bg-primary text-white py-3 font-semibold !rounded-button hover:bg-red-700 transition-colors"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-2xl font-bold mb-6">Household Items</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Water Bottle -->
+          <div class="product-card bg-gray-900 rounded-lg overflow-hidden">
+            <div class="aspect-w-1 aspect-h-1 bg-gray-800">
+              <img
+                src="https://static.readdy.ai/image/bf761e300f174f1d13cf0f4a035dcb62/a1625c21e19ef311ee2342cee1caf3e4.png"
+                alt="Eco Water Bottle"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Eco Water Bottle</h3>
+              <p class="text-gray-400 mb-4">
+                This bottle is made and designed to be 100% recycled plastic.
+              </p>
+              <p class="text-lg font-bold mb-4">$34.99</p>
+              <button
+                class="w-full bg-primary text-white py-3 font-semibold !rounded-button hover:bg-red-700 transition-colors"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+          <!-- Coffee Mug -->
+          <div class="product-card bg-gray-900 rounded-lg overflow-hidden">
+            <div class="aspect-w-1 aspect-h-1 bg-gray-800">
+              <img
+                src="https://static.readdy.ai/image/bf761e300f174f1d13cf0f4a035dcb62/add8f816e107f74349288fdd4dd36bb4.png"
+                alt="Campaign Coffee Mug"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Campaign Coffee Mug</h3>
+              <p class="text-gray-400 mb-4">
+                Ceramic mug featuring our campaign message. Perfect for your
+                morning coffee or tea.
+              </p>
+              <p class="text-lg font-bold mb-4">$19.99</p>
+              <button
+                class="w-full bg-primary text-white py-3 font-semibold !rounded-button hover:bg-red-700 transition-colors"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="py-12 bg-gray-950">
+      <div class="container mx-auto px-8 lg:px-16">
+        <div class="flex flex-col lg:flex-row justify-between gap-8">
+          <div class="lg:w-1/3">
+            <div class="flex items-center mb-6">
+              <div
+                class="w-10 h-10 flex items-center justify-center bg-red-600 rounded-full mr-3"
+              >
+                <div
+                  class="w-6 h-6"
+                  style="background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%23FFD700\'%3E%3Cpath d=\'M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\'/%3E%3C/svg%3E'); background-repeat: no-repeat; background-position: center;"
+                ></div>
+              </div>
+              <h3 class="text-xl font-bold">Pureelium </h3>
+            </div>
+            <p class="text-gray-400 mb-6">
+              Join our movement against diesel mining through our sustainable
+              and meaningful merchandise.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors"
+              >
+                <i class="ri-twitter-x-line"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors"
+              >
+                <i class="ri-instagram-line"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors"
+              >
+                <i class="ri-facebook-line"></i>
+              </a>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 lg:grid-cols-3 gap-8 lg:w-2/3">
+            <div>
+              <h4 class="font-semibold mb-4">Shop</h4>
+              <ul class="space-y-2 text-gray-400">
+                <li>
+                  <a href="#" class="hover:text-primary transition-colors"
+                    >All Products</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-primary transition-colors"
+                    >T-Shirts</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-primary transition-colors"
+                    >Sweatpants</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-primary transition-colors"
+                    >Accessories</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-4">Help</h4>
+              <ul class="space-y-2 text-gray-400">
+                <li>
+                  <a href="#" class="hover:text-primary transition-colors"
+                    >Shipping</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-primary transition-colors"
+                    >Returns</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-primary transition-colors"
+                    >Sizing Guide</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-primary transition-colors"
+                    >FAQ</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-4">Contact</h4>
+              <ul class="space-y-2 text-gray-400">
+                <li class="flex items-center">
+                  <i class="ri-mail-line mr-2"></i>
+                  <a
+                    href="mailto:store@stopdieselmining.org"
+                    class="hover:text-primary transition-colors"
+                    >store@stopdieselmining.org</a
+                  >
+                </li>
+                <li class="flex items-center">
+                  <i class="ri-phone-line mr-2"></i>
+                  <a
+                    href="tel:+15551234567"
+                    class="hover:text-primary transition-colors"
+                    >+1 (555) 123-4567</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500"
+        >
+          <p>© 2025 Pureelium . All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const countrySelector = document.getElementById("country-selector");
+        const countryDropdown = document.getElementById("country-dropdown");
+        const selectedCountry = document.getElementById("selected-country");
+        const tshirtImage = document.querySelector(".product-card:first-child img");
+        const pantsCountrySelector = document.getElementById(
+          "pants-country-selector",
+        );
+        const pantsCountryDropdown = document.getElementById(
+          "pants-country-dropdown",
+        );
+        const pantsSelectedCountry = document.getElementById(
+          "pants-selected-country",
+        );
+        const pantsImage = document.querySelector(".product-card:nth-child(2) img");
+        countrySelector.addEventListener("click", () => {
+          countryDropdown.classList.toggle("hidden");
+        });
+        document.addEventListener("click", (e) => {
+          if (!countrySelector.contains(e.target)) {
+            countryDropdown.classList.add("hidden");
+          }
+          if (!pantsCountrySelector.contains(e.target)) {
+            pantsCountryDropdown.classList.add("hidden");
+          }
+        });
+        const countryButtons = countryDropdown.querySelectorAll("button");
+        countryButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const country = button.textContent;
+            const imageUrl = button.dataset.image;
+            selectedCountry.textContent = country;
+            tshirtImage.src = imageUrl;
+            countryDropdown.classList.add("hidden");
+          });
+        });
+        pantsCountrySelector.addEventListener("click", () => {
+          pantsCountryDropdown.classList.toggle("hidden");
+        });
+        const pantsCountryButtons = pantsCountryDropdown.querySelectorAll("button");
+        pantsCountryButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const country = button.textContent;
+            const imageUrl = button.dataset.image;
+            pantsSelectedCountry.textContent = country;
+            pantsImage.src = imageUrl;
+            pantsCountryDropdown.classList.add("hidden");
+          });
+        });
+        const sizeLabels = document.querySelectorAll(
+          'label[for^="ts-"], label[for^="sp-"]',
+        );
+        sizeLabels.forEach((label) => {
+          label.addEventListener("click", function () {
+            const radioGroup = this.getAttribute("for").startsWith("ts-")
+              ? "tshirt-size"
+              : "pants-size";
+            document
+              .querySelectorAll(`label[for^="${radioGroup.split("-")[0]}-"]`)
+              .forEach((l) => {
+                l.classList.remove("bg-primary", "text-white");
+              });
+            this.classList.add("bg-primary", "text-white");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
